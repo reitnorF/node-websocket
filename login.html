@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>slm</title>
+</head>
+<form action="/l" method="post">
+<input type="text" name="u" required autofocus>
+<br>
+<input type="password" name="p" required>
+<button type="submit">Login</button>
+</form>
+</html>
+<script>
+console.log("boi")
+var sock = new WebSocket("ws://localhost:3001")
+
+sock.onopen = () => {
+	sock.send("boi!")
+}
+sock.onmessage = (e) => {
+	console.log(e.data)
+}
+</script>
